@@ -1,5 +1,6 @@
 <?php
 require 'ht2.html';
+if (!isset($_REQUEST['area1'])) return;
 $oldStr = $_REQUEST['area1'];
 
 function changeStr(string $string) : string

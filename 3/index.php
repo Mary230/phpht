@@ -5,7 +5,7 @@
  * Date: 2019-03-04
  * Time: 17:29
  */
-require 'ht2.html';
+require 'ht3.html';
 if(isset($_REQUEST['area1'])) {
     $allStr = $_REQUEST['area1'];
 
