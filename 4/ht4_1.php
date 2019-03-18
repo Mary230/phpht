@@ -24,6 +24,7 @@ function check($textarr, $intarr){
     if (!isset($textarr) || !isset($intarr)) return;
     $realLife = [];
     $count = 10000;
+
 //    сортировка, чтоб по увеличению были, для задания не нужна, убираю
 //    for($i=0; $i<count($intarr); $i++){
 //        for($j=$i+1; $j<count($intarr); $j++){

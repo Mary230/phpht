@@ -40,6 +40,6 @@ $firstjson = [
 print_r(json_encode($firstjson, JSON_UNESCAPED_UNICODE));
 include "ht4_1.php";
 echo "\n<br>";
-    echo "\n<br>";
+echo "\n<br>";
 check($arr, $probarr);
 endif;
