@@ -13,7 +13,12 @@ foreach ($arr as &$str):
         $i--;
         $int = substr(trim($str), $i);
     endwhile;
-    $str = trim($str, "1234567890 \t\n\r\0\x0B");
+
+    $str = explode(" ", trim($str));
+    array_pop($str);
+    $str = implode(" ", $str);
+
+
     $intarr[] = $int;
     $sumOfInt += $int;
 endforeach;
