@@ -49,7 +49,7 @@ if (preg_match('/(?=[A-Z]{4,})/m', $password)){
     echo "<p class= \"warning\">Ваш пароль не должен содержать более трех букв верхнего регистра подряд";
     return;
 }
-if (preg_match('/(?=[%$#_*]{4,})/m', $password)){
+if (preg_match('/(?=[%\$#_\*]{4,})/m', $password)){
     echo "<p class= \"warning\">Ваш пароль не должен содержать более трех специальных символов подряд";
     return;
 }
