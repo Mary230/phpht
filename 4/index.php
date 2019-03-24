@@ -17,8 +17,6 @@ foreach ($arr as &$str):
     $str = explode(" ", trim($str));
     array_pop($str);
     $str = implode(" ", $str);
-
-
     $intarr[] = $int;
     $sumOfInt += $int;
 endforeach;
