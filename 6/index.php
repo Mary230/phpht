@@ -13,7 +13,6 @@ foreach ($iniArr as $item){
         $rules[] = $item["symbol"];
     }
 }
-
 foreach ($textArr as &$str){
     if (strpos($str, $rules[0]."=")===0){
         $value = help($str);
@@ -37,7 +36,6 @@ foreach ($textArr as &$str){
                     $str = mb_strtolower($str);
                     $flag = 1;
                     break;
-
             endswitch;
             if (!$flag) {
                 throw new Exception("Ошибка параметра");
