@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Утилиты</title>
+</head>
+<body>
+<form method="post" action="index.php">
+    <label>Пожалуйста, введите адрес:<br>
+        <input type="text" name="url" placeholder="url or ip-address" required>
+    </label><br>
+    <label>Выберите тип утилиты ->
+        <select name="type" required>
+            <option value="p">PING</option>
+            <option value="t">TRACERT</option>
+        </select>
+    </label><br>
+    <input type="submit" value="Отправить">
+</form>
+</body>
+</html>
