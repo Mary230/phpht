@@ -1,6 +1,6 @@
 
 <?php
-include "index.html";
+//include "index.html";
 include "helper.php";
 if (!isset($_REQUEST['month'])) $month = "now";
 else $month = $_REQUEST['month'];
@@ -13,7 +13,7 @@ if ($month == "now") {
     $dateTime->setDate(date("o", $dateTime->getTimestamp()),
         date("n", $dateTime->getTimestamp()),1);}
 else $dateTime = mySetDate($fileArr,$month);
-echo "<b>".date("l", $dateTime->getTimestamp())."</b>";
+
 $num = 0;
 $wed = 0;
 
