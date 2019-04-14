@@ -38,28 +38,29 @@ $non = addEl($dateTime);
         <tr >
             <td>пн</td><td>вт</td><td>ср</td><td>чт</td><td>пт</td><td>сб</td><td>вс</td>
         </tr>
-        <?php
-        foreach ($non as $item){
-            if (!($num%7)) echo "<tr>";
-            if ($num==5||$num==6||$num==12||$num==13||$num==19||$num==20||$num==26||$num==27||$num=33||$num==34){
-                echo "<td style='color: red'> </td>";
-            }
-            else
-                echo "<td> </td>";
-            $num ++;
-            if (!($num%7)) echo "</tr>";
+
+
+<?php
+    foreach ($non as $item){
+        if (!($num%7)) echo "<tr>";
+        if ($num==5||$num==6){
+            echo "<td style='color: red'> </td>";
         }
-        foreach($daterange as $date){
-            if (!($num%7)) echo "<tr>";
-            if ($num==5||$num==6||$num==12||$num==13||$num==19||$num==20||$num==26||$num==27||$num=33||$num==34){
-                echo "<td style='color: red'>";
-            }
+        else
+            echo "<td> </td>";
+        $num ++;
+        if (!($num%7)) echo "</tr>";
+        }
+    foreach($daterange as $date){
+        if (!($num%7)) echo "<tr>";
+        if (date("w",$date->getTimestamp()) == 0 || date("w",$date->getTimestamp()) == 6){
+            echo "<td style='color: red'>";
+        }
             else
                 echo "<td>";
             echo date("j", $date->getTimestamp())."</td>";
             $num ++;
             if (!($num%7)) echo "</tr>";
         }
-
-        ?>
+?>
     </table>
