@@ -1,12 +1,13 @@
 
 <?php
-include "index.html";
+//include "index.html";
+include "k.html";
 include "helper.php";
 if (!isset($_REQUEST['month'])) $month = "now";
 else $month = $_REQUEST['month'];
 
-$fileArr = file("month.txt");
-$fileArr = explode(",", $fileArr[0]);
+$fileArr = file_get_contents("month.txt");
+$fileArr = explode(",", $fileArr);
 
 if ($month == "now") {
     $dateTime = new DateTime();

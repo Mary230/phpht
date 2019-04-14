@@ -6,6 +6,7 @@ function mySetDate(array $fromTxt, string $mon) : DateTime{
         if ($mon == $month) return $myDate -> setDate(date("o", $myDate -> getTimestamp()),$i,1);
         else $i++;
     }
+    if ($mon == "dec") return $myDate -> setDate(date("o", $myDate -> getTimestamp()),12,1);
     return new DateTime();
 }
 
