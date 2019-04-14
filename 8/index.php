@@ -1,6 +1,6 @@
 
 <?php
-//include "index.html";
+include "index.html";
 include "helper.php";
 if (!isset($_REQUEST['month'])) $month = "now";
 else $month = $_REQUEST['month'];
