@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logger</title>
+</head>
+<body>
+<form method="post" action="index.php">
+    <label for="text">Введите текст</label><br>
+    <textarea name="text" id="text" style="height: 200px"></textarea><br>
+
+    <label for="r1">Внести лог в файл</label>
+    <input type="radio" id="r1" name="type" value="file"/><br>
+
+    <label for="r2">Вывести содержимое в браузер</label>
+    <input type="radio" id="r2" name="type" value="browser" checked/><br>
+
+    <label for="filename">Имя файла: </label>
+    <input type="text" name="filename" id="filename" placeholder="filename"/><br>
+
+    <label for="setting">Выберите формат дат</label>
+    <select name="setting" id="setting">
+        <option value="d">Дата</option>
+        <option value="t">Время</option>
+        <option value="off" selected>Выключить</option>
+    </select><br>
+
+    <input type="submit" value="Ок"/>
+</form>
+</body>
+</html>

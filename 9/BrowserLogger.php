@@ -1,7 +1,7 @@
 <?php
-include "AbstractLogger.php";
+require_once "Logger.php";
 
-class BrowserLogger extends AbstractLogger
+class BrowserLogger extends Logger
 {
     public $setting;
 
@@ -17,12 +17,12 @@ class BrowserLogger extends AbstractLogger
 
     function write(string $str)
     {
+        date_default_timezone_set ( "Europe/Moscow" );
         $dateTime = new DateTime();
         switch ($this->setting):
-            case "d": echo date("j F o", $dateTime->getTimestamp()); break;
+            case "d": echo date("j F o h:i", $dateTime->getTimestamp()); break;
             case "t": echo date("h:i",$dateTime->getTimestamp()); break;
-            case "o": echo date("r", $dateTime->getTimestamp()); break;
         endswitch;
-        echo "<br>\n".$str;
+        echo "      ".$str."<br>";
     }
 }

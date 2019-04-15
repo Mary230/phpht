@@ -1,10 +1,10 @@
 <?php
-include "AbstractLogger.php";
+require_once "Logger.php";
 
-class FileLogger extends AbstractLogger{
+class FileLogger extends Logger{
 
-    public $filename;
-    public $handler;
+    private $filename;
+    private $handler;
 
     public function __construct(string $filename)
     {
@@ -13,7 +13,7 @@ class FileLogger extends AbstractLogger{
     }
 
     function write(string $str){
-        fwrite($this->handler, $str);
+        fwrite($this->handler, $str."\n");
     }
 
     public function __destruct()
