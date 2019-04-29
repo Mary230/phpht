@@ -25,20 +25,6 @@ function check($textarr, $intarr){
     $realLife = [];
     $count = 10000;
 
-//    сортировка, чтоб по увеличению были, для задания не нужна, убираю
-//    for($i=0; $i<count($intarr); $i++){
-//        for($j=$i+1; $j<count($intarr); $j++){
-//            if($intarr[$i]>$intarr[$j]){
-//                $temp = $intarr[$j];
-//                $intarr[$j] = $intarr[$i];
-//                $intarr[$i] = $temp;
-//
-//                $temp = $textarr[$j];
-//                $textarr[$j] = $textarr[$i];
-//                $textarr[$i] = $temp;
-//            }
-//        }
-//    }
     foreach ($textarr as $item){
         $realLife[$item] = 0;
     }
